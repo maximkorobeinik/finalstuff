@@ -1,0 +1,617 @@
+@import 'main.scss';
+@import 'nav_header.scss';
+@import 'magnific-popup.scss';
+
+
+section.item_details{
+    width: 100%;
+    margin-top: 24px;
+    height: auto;
+    @include w-from($screen-xl){
+        margin-top: 32px;
+    }
+    .details_container{
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas: 'slider'
+        'item_name'
+        'buy_now'
+        'description'
+        'interesting';
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: repeat(2, auto);
+            grid-template-areas: 'item_name slider'
+            'buy_now slider'
+            'description slider'
+            'interesting interesting';
+        }
+        .detail_slider{
+            grid-area: slider;
+            overflow: hidden;
+            .mob_slider_desc{
+                display: block;
+                @include w-from($screen-xl){
+                    display: none;
+                }
+                .details_slider_main{
+                    width: 288px;
+                    height: 288px;
+                    display: flex;
+                    margin: 0 auto;
+                    img{
+                        width: 288px;
+                    }
+    
+                }
+                .details_slider_small{
+                    width: 324px;
+                    height: 75px;
+                    background: transparent; 
+                    display: flex;
+                    margin: 0 auto;
+                    margin-top: 8px;
+                    margin-left: 16px;
+                    justify-content: space-between;
+                    .slide{
+                        width: 75px;
+                        height: 75px;
+                        margin-right: 8px;   
+                        opacity: 0.4;
+                        transition: 0.2s;
+                    }
+                    .slide.slick-current{
+                        opacity: 1;
+                    }
+                    img{
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+            }
+            .desk_slider_desc{
+                display: none;
+                @include w-from($screen-xl){
+                    display: block;
+                }
+                .details_slider_main{
+                    width: 656px;
+                    height: 656px;
+                    display: flex;
+                    margin: 0 auto;
+                    img{
+                        width: 656px;
+                    }
+    
+                }
+                .details_slider_small{
+                    width: 656px;
+                    height: 140px;
+                    background: transparent; 
+                    display: flex;
+                    margin: 0 auto;
+                    margin-top: 24px;
+                    justify-content: space-between;
+                    .slide{
+                        width: 140px;
+                        height: 140px;
+                        margin-right: 16px;
+                        opacity: 0.4;
+                        transition: 0.2s;
+                    }
+                    .slide.slick-current{
+                        opacity: 1;
+                    }
+                    img{
+                        width: 140px;
+                        height: 140px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .desc_for_an_item{
+            grid-area: item_name;
+            margin: 25px 0 0 20px;
+            @include w-from($screen-xl){
+                margin: 0;
+                width: 475px;
+            }
+            h6{
+                font-family: 'PT Sans', sans-serif;
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 32px;
+                color: #000;
+                line-height: 40px;
+            }
+            p{
+                font-size: 13px;
+                font-weight: 400;
+                margin-top: 11px;
+            }
+        }
+        .buy_now{
+            grid-area: buy_now;
+            height: 361px;
+            width: 100%;
+            background: #f2f2f2;
+            margin-top: 18px;
+            @include w-from($screen-xl){
+                margin-left: -25px;
+                height: 267px;
+                width: 442px;
+                margin-top: 35px;
+                padding: 5px 0 0 9px;
+            }
+            .colors{
+                width: 260px;
+                @include w-from($screen-xl){
+                    width: auto;
+                    display: flex;
+                }
+                p.color{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    padding: 26px 0 0 16px;
+                }
+                .buttons_color{
+                    margin: 11px 0 0 16px;
+                    display: grid;
+                    @include w-from($screen-xl){
+                        margin: 19px 0 0 67px;
+                        display: flex;
+                    }
+                    input[type="radio"]{
+                        display: none;
+                        &:checked + label{
+                            background: #666666;
+                            color: #ffffff;
+                        }
+                    }
+                    label{
+                        background: #ffffff;
+                        border: none;
+                        height: 32px;
+                        width: 142px;
+                        margin-bottom: 4px;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #666666;
+                        margin-right: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover{
+                            border: 1px solid #666666;
+                            cursor: pointer;
+                            width: 140px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+            .sizes{
+                @include w-from($screen-xl){
+                    display: flex;
+                    margin-top: 2px;
+                }
+                p.sizes{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    padding: 22px 0 0 16px;
+                }
+                .buttons_sizes{
+                    display: flex;
+                    margin: 11px 0 23px 16px;
+                    @include w-from($screen-xl){
+                        margin: 18px 0 23px 26px;
+                        display: flex;
+                    }
+                    input[type="radio"]{
+                        display: none;
+                        &:checked + label{
+                            background: #666666;
+                            color: #ffffff;
+                        }
+                    }
+                    label{
+                        width: 42px;
+                        height: 32px;
+                        background: #ffffff;
+                        color: #666666;
+                        border: none;
+                        margin-right: 12px;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover{
+                            border: 1px solid #666666;
+                            cursor: pointer;
+                            width: 40px;
+                            height: 30px;
+                        }
+                        
+                    }
+                }
+            }
+            a.sizes_table{
+                font-size: 13px;
+                font-weight: 400;
+                color: #000;
+                padding-left: 16px;
+                &:hover{
+                    color: #4541FE;
+                }
+            }
+            button.buy_btn{
+                width: 167px;
+                height: 42px;
+                background: linear-gradient(180deg, #FFC908 0%, #FFBA08 100%);
+                box-shadow: 0px 0px 15px rgba(255, 146, 17, 0.5);
+                border-radius: 4px;
+                border: none;
+                margin: 42px 0 0 18px;
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+                transition: 0.2s;
+                outline: none;
+                &:hover{
+                    box-shadow: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .item_description{
+            grid-area: description;
+            width: 100%;
+            .item_properties{
+                display: grid;
+                height: auto;
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas: 'specs specs'
+                'specification specification'
+                'details details';
+                margin-top: 24px;
+                padding: 0 0 0 16px;
+                grid-gap: 7px;
+                @include w-from($screen-xl){
+                    padding: 0;
+                    margin-top: 34px;
+                }
+    
+                b{
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: #afafaf;
+                }
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #000;
+                    padding-top: 7px;
+                }
+                .item_specs{
+                    display: flex;
+                    grid-area: specs;
+                    .materials_of_item{
+                    }
+                    .country_if_origin{
+                        margin-left: 24px;
+                        @include w-from($screen-xl){
+                            margin-left: 32px;
+                        }
+                    }
+                }
+                .specification_of_item{
+                    grid-area: specification;
+                    margin-top: 17px;
+                    width: 290px;
+                    @include w-from($screen-xl){
+                        margin-top: 26px;
+                        width: 430px;
+                    }
+                    b{
+                        padding-top: 10px;
+                    }
+                    p{
+                        padding-top: 6px;
+                        line-height: 22px;
+                        padding-bottom: 14px;
+                    }
+                    
+                }
+                .details_of_item{
+                    grid-area: details;
+                    margin-top: 7px;
+                    @include w-from($screen-xl){
+                        margin-top: 11px;
+                    }
+                    p{
+                        padding-top: 5px !important;
+                        line-height: 18px;
+                    }
+                }
+                
+            }
+        }
+        .might_be_interesting{
+            grid-area: interesting;
+            width: auto;
+            height: auto;
+            .might_be_interesting_mobile{
+            width: 288px;
+            height: 432px;
+            background: transparent;
+            margin: 0 auto;
+            margin-top: 65px;
+            margin-bottom: 40px;
+                @include w-from($screen-xl){
+                    display: none;
+                }
+                .interesting_header{
+                    grid-area: interest_header;
+                    h6{
+                        font-size: 25px;
+                        font-weight: 700;
+                        color: #000;
+                        line-height: 32px;
+                    }
+                }
+                .interesting_slider{
+                    width: 240px;
+                    height: 344px;
+                    margin: 0 auto;
+                    position: relative;
+                    margin-top: 24px;
+                    .interesting_slider_mob{
+                        width: 240px;
+                        height: 344px;
+                        .interest_slide_item{
+                            width: 240px;
+                            height: 344px;
+                            img{
+                                width: 240px;
+                                height: 240px;
+                            }
+                            a{
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #000;
+                                text-decoration: underline;
+                                display: block;
+                                width: 165px;
+                                padding-top: 8px;
+                                line-height: 21px;
+                            }
+                            p.title{
+                                font-size: 13px;
+                                font-weight: 400;
+                                color: #000;
+                                padding-top: 7px;
+                            }
+                            .price{
+                                padding-top: 15px;
+                                p{
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .might_be_interesting_desktop{
+                display: none;
+                @include w-from($screen-xl){
+                    display: grid;
+                    width: 1136px;
+                    height: 400px;
+                    margin: 0 auto;
+                    background: transparent;
+                    margin: 70px 0 -11px 0;
+                    grid-template-rows: repeat(2, auto);
+                    grid-template-areas: 'interest_header'
+                    'interest_slides';
+                }
+                .interesting_header{
+                    grid-area: interest_header;
+                    h6{
+                        font-size: 25px;
+                        font-weight: 700;
+                        color: #000;
+                    }
+                }
+                .interesting_slider_desk{
+                    grid-area: interest_slides;
+                    margin-top: 25px;
+                    width: 1130px;
+                    height: 344px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 23px;
+                    padding-right: 23px;
+                    .interest_slide_item{
+                        width: 240px;
+                        height: 344px;
+                        background: none;
+                        margin: 0 1px;
+                        display: grid;
+                        justify-content: center;
+                        img{
+                            width: 240px;
+                            height: 240px;
+                        }
+                        a{
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #000;
+                            text-decoration: underline;
+                            display: block;
+                            width: 165px;
+                            padding-top: 5px;
+                            line-height: 21px;
+                        }
+                        p.title{
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: #000;
+                            padding-top: 7px;
+                            padding-bottom: 12px;
+                        }
+                        .price{
+                            p{
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.table{
+    position: relative;
+    width: auto;
+    height: 198px;
+    background: #ffffff;
+    @include w-from($screen-xl){
+        width: 688px;
+        height: 198px;
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+    .table_header{
+        padding: 20px 0 0 26px;
+        h6{
+            font-size: 25px;
+            font-weight: 700;
+            color: #000;
+        }
+    }
+    .table_items{
+        display: grid;
+        overflow-x: scroll;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 'us'
+        'uk'
+        'eu';
+        margin-top: 26px;
+        mask-image: linear-gradient(
+        90deg,
+        transparent 0, rgba(0, 0, 0, .25) 9px,
+        #000 18px,
+        #000 calc(100% - 18px),
+        rgba(0, 0, 0, .25) calc(100% - 9px),
+        transparent);
+        @include w-from($screen-xl){
+            mask-image: none;
+            margin-left: 24px;
+        }
+        .us{
+            grid-area: us;
+            display: flex;
+            .table_item{
+                width: 70px;
+                height: 30px;
+                border: 1px solid #dddddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include w-from($screen-xl){
+                    width: 69px;
+                }
+                &:first-child{
+                    justify-content: flex-start;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                p.cell_header{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #000;
+                    padding-left: 8px;
+                }
+            }
+        }
+        .uk{
+            grid-area: uk;
+            display: flex;
+            .table_item{
+                width: 70px;
+                height: 30px;
+                border: 1px solid #dddddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include w-from($screen-xl){
+                    width: 69px;
+                }
+                &:first-child{
+                    justify-content: flex-start;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                p.cell_header{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #000;
+                    padding-left: 8px;
+                }
+            }
+        }
+        .eu{
+            grid-area: eu;
+            display: flex;
+            .table_item{
+                width: 70px;
+                height: 30px;
+                border: 1px solid #dddddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include w-from($screen-xl){
+                    width: 69px;
+                }
+                &:first-child{
+                    justify-content: flex-start;
+                }
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                p.cell_header{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #000;
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+}

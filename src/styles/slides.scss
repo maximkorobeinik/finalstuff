@@ -1,0 +1,234 @@
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+
+}
+/* Лента слайдов */
+.header_images .slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{
+  
+}
+/* Слайд активный (показывается) */
+.slide.slick-slide.slick-active{
+}
+
+/* Слайд по центру */
+.slick-center{
+}
+.slick-current ~ .slide{
+    opacity: 1;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.desktop_slides .slick-arrow{
+    position: absolute;
+    top: 48%;
+    font-size: 0;
+    width: 18px;
+    height: 50px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+/* Стрелка влево */
+.desktop_slides .slick-arrow.slick-prev{
+    left: 24px;
+    background: url(../assets/icons/arr-left.svg) 0 0 / 100% no-repeat;
+}
+/* Стрелка вправо */
+.desktop_slides .slick-arrow.slick-next{
+    right: 24px;
+    background: url(../assets/icons/arr-right.svg) 0 0 / 100% no-repeat;
+    
+}
+
+.mob_slides .slick-arrow{
+    position: absolute;
+    top: 303px;
+    font-size: 0;
+    width: 17px;
+    height: 26px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+}
+/* Стрелка влево */
+.mob_slides .slick-arrow.slick-prev{
+    left: 9px;
+    background: url(../assets/icons/arr-left.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+}
+/* Стрелка вправо */
+.mob_slides .slick-arrow.slick-next{
+    right: 9px;
+    background: url(../assets/icons/arr-right.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.interesting_slider_mob .slick-arrow{
+    position: absolute;
+    top: 161px;
+    font-size: 0;
+    width: 17px;
+    height: 26px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+}
+
+.interesting_slider_mob .slick-arrow.slick-prev{
+    left: -35px;
+    background: url(../assets/icons/arr-left-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+    
+}
+
+.interesting_slider_mob .slick-arrow.slick-next{
+    right: -35px;
+    background: url(../assets/icons/arr-right-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.interesting_slider_desk .slick-arrow{
+    position: absolute;
+    top: 161px;
+    font-size: 0;
+    width: 17px;
+    height: 26px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+}
+
+.interesting_slider_desk .slick-arrow.slick-prev{
+    left: -31px;
+    background: url(../assets/icons/arr-left-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+}
+
+.interesting_slider_desk .slick-arrow.slick-next{
+    right: -37px;
+    background: url(../assets/icons/arr-right-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.done_offer_slider_mob .slick-arrow{
+    position: absolute;
+    top: 161px;
+    font-size: 0;
+    width: 17px;
+    height: 26px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+}
+
+.done_offer_slider_mob .slick-arrow.slick-prev{
+    left: -35px;
+    background: url(../assets/icons/arr-left-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+    
+}
+
+.done_offer_slider_mob .slick-arrow.slick-next{
+    right: -35px;
+    background: url(../assets/icons/arr-right-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+.done_offer_slider_desk .slick-arrow{
+    position: absolute;
+    top: 161px;
+    font-size: 0;
+    width: 17px;
+    height: 26px;
+    outline: none;
+    border: none;
+    z-index: 1000;
+}
+
+.done_offer_slider_desk .slick-arrow.slick-prev{
+    left: -31px;
+    background: url(../assets/icons/arr-left-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+}
+
+.done_offer_slider_desk .slick-arrow.slick-next{
+    right: -37px;
+    background: url(../assets/icons/arr-right-black.svg) 0 0 / 100% no-repeat;
+    opacity: 0.5;
+    transition: .2s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+.header_images .slick-arrow{}

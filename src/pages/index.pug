@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="styles/main.css")
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    body
+        include header.pug
+        include header_main_slider.pug           
+        main
+            .main_container
+                section.description_section
+                    .top_description
+                        p Фетч&nbsp;&mdash; мультибрендовый магазин модной одежды.
+                        p Следим за&nbsp;трендами и&nbsp;часто обновляем ассортимент.
+                        p Доставляем по&nbsp;Москве за&nbsp;день, по&nbsp;России&nbsp;&mdash; за&nbsp;неделю.
+                    .catalog_section
+                        .mens_catalog
+                            a.catalog_header(href="") Для мужчин
+                            a(href="") Верхняя одежда
+                            a(href="") Рубашки и поло
+                            a(href="") Трикотаж
+                            a(href="") Брюки и джинсы
+                            a(href="") Бельё и носки
+                        .womans_catalog
+                            a.catalog_header(href="") Для женщин
+                            a(href="") Верхняя одежда
+                            a(href="") Рубашки и поло
+                            a(href="") Трикотаж
+                            a(href="") Платья и юбки
+                            a(href="") Бельё и носки
+                        .shoes_catalog
+                            a.catalog_header(href="shoes.html") Обувь
+                            a.costyl(href="") Кроссовки и кеды
+                            a(href="") Ботинки
+                        .accessories
+                            a.catalog_header(href="") Аксессуары
+                            a(href="") Сумки и рюкзаки
+                            a(href="") Часы
+                            a(href="") Бижутерия
+                            a(href="") Средства<br /> для ухода
+                        .price_cuts
+                            a.catalog_header(href="") Скидки
+                            a(href="") Летняя распродажа
+                            a(href="") Коллекция 2018
+                .main_cards_section
+                    section.look_and_choose
+                        .lookbook_section
+                            a.lookbook(href="") Лукбук, лето 2019
+                            p.lookbook(href="") Стильные образы для тёплых деньков
+                            img.mobile_lookbook(src="assets/img/lookbook_bkgd.webp", alt="")
+                            img.desktop_lookbook(src="assets/img/lookbook_desc.png", alt="")
+                        .our_choose
+                            a.choose(href="") Выбор редакции: часы
+                            //- <br />
+                            //- a.choose(href="") часы
+                            p.choose_desc ТОП-5 лучших предложений по версии<br /> администрации Фетч
+                    section.new_collection
+                        a.collection(href="") Новая коллекция adidas Originals 
+                        //- a.collection(href="") 
+                        p.collection_desc Десять крутейших кроссовок
+                        img.mobile(src="assets/img/collection_bkgd.webp", alt="")
+                        img.desktop(src="assets/img/sneaker_desctop.png", alt="")
+                    section.preorder
+                        a.preorder(href="") Предзаказ: Maison Margiela Fusion
+                        //- <br />
+                        //- a.preorder(href="") 
+                        .preorder_desc 
+                            p От 92
+                            p 000&#x20bd
+                        img.preorder_mobileimg(src="assets/img/shoes_preorder.webp", alt="")
+                        img.preorder_deskimg1(src="assets/img/preorder_margiela_1.jpg", alt="")
+                        img.preorder_deskimg2(src="assets/img/preorder_margiela_2.jpg", alt="")
+                        img.preorder_deskimg3(src="assets/img/preorder_margiela_3.jpg", alt="")
+        script(src="scripts/script.js")
+        include footer.pug
+
+    

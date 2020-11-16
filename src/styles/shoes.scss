@@ -1,0 +1,154 @@
+@import 'main.scss';
+@import 'nav_header.scss';
+
+section.shoes{
+    width: 100%;
+    height: 2030px;
+    margin-top: 8px;
+    @include w-from($screen-xl){
+        height: 1725px;
+    }
+    .product_name{
+        background: #000;
+        height: 160px;
+        h6{
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 20px 0 24px 17px;
+            @include w-from($screen-xl){
+                margin: 0 auto;
+                padding-left: 0;
+                width: 1136px;
+                padding-top: 28px;
+            }
+        }
+    }
+    .items_list{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        margin-top: -79px;
+        justify-items: center;
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+            margin-top: -62px;
+            grid-template-columns: repeat(4, 240px);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 32px;
+        }
+        .item{
+            width: 136px;
+            margin-bottom: 33px;
+            @include w-from($screen-xl){
+                width: auto;
+                margin-bottom: 22px;
+            }
+            &:nth-child(odd){
+                padding: 0 0 0 8px;
+                @include w-from($screen-xl){
+                    padding: 0;
+                }
+            }
+            &:nth-child(even){
+                padding: 0 9px 0 0;
+                @include w-from($screen-xl){
+                    padding: 0;
+                }
+            }
+            img.sneaker_mob{
+                padding-bottom: 8px;
+                @include w-from($screen-xl){
+                    display: none;
+                }
+            }
+            img.sneaker_desk{
+                display: none;
+                @include w-from($screen-xl){
+                    display: block;
+                }
+            }
+            a{
+                font-size: 13px;
+                font-weight: 700;
+                color: #000;
+                line-height: 18px;
+                @include w-from($screen-xl){
+                    font-size: 16px;
+                    width: 180px;
+                    display: block;
+                    padding-top: 6px;
+                    line-height: 21px;
+                }
+                &::after{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            p.title{
+                font-size: 13px;
+                font-weight: 400;
+                color: #000;
+                padding-top: 4px;
+                @include w-from($screen-xl){
+                    padding-top: 8px;
+                }
+            }
+            .price{
+                display: flex;
+                padding-top: 13px;
+                p{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #000;
+                    padding-right: 3px;
+                }
+            }
+        }
+
+    }
+    .paginator{
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+        }
+        .paginator_desc{
+            p{
+                font-size: 12px;
+                font-weight: 400;
+                color: #666666;
+                padding: 12px 0 0 16px;
+                @include w-from($screen-xl){
+                    padding: 0;
+                    font-size: 13px;
+                    margin-top: 49px;
+                }
+            }
+        }
+        .pages{
+            display: flex;
+            align-items: flex-end;
+            padding: 9px 0 0 16px;
+            @include w-from($screen-xl){
+                padding: 9px 0 0 0;
+            }
+            a.chosed_one{
+                color: #000;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            a{
+                font-size: 16px;
+                text-decoration: none;
+                padding-right: 4px;
+                color: #666666;
+                &:hover{
+                    color: #4541fe;
+                }
+            }
+        }
+    }
+}

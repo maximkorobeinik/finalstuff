@@ -1,0 +1,142 @@
+@import 'main.scss';
+@import 'nav_header.scss';
+
+
+
+section.about_shop{
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    @include w-from($screen-xl){
+        margin-bottom: -8px;
+    }
+    .about_container{
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 'shopdesc'
+        'additional';
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(2, auto);
+            grid-template-areas: 'shopdesc additional';
+            margin-top: 36px;
+            grid-gap: 83px;
+        }
+        .about_content{
+            grid-area: shopdesc;
+            padding: 0 10px 0 16px;
+            margin-top: 28px;
+            @include w-from($screen-xl){
+                width: 465px;
+                margin-top: 0;
+                padding: 0;
+            }
+            h3.about_shop{
+                padding-left: 1px;
+                color: #000;
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 28px;
+                @include w-from($screen-xl){
+                    margin-bottom: 37px;
+                }
+            }
+            p.about_shop{
+                font-size: 18px;
+                font-weight: 400;
+                color: #000;
+                line-height: 23px;
+                padding-bottom: 17px;
+                @include w-from($screen-xl){
+                    padding-bottom: 16px;
+                }
+                &:nth-last-child(1){
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .additional_about{
+            grid-area: additional;
+            background: #f2f2f2;
+            height: 400px;
+            padding: 10px;
+            margin-top: 6px;
+            @include w-from($screen-xl){
+                width: 560px;
+                height: 334px;
+                margin-top: 42px;
+                padding: 21px 0 0 28px;
+            }
+            h6.address{
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                padding-top: 8px;
+                padding-bottom: 5px;
+            }
+            a.add_mail{
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                text-decoration: underline;
+                display: block;
+            }
+            a.add_phone{
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+                text-decoration: none;
+            }
+            b.add_phone{
+                font-size: 13px;
+                font-weight: 400;
+                color: #000;
+                display: block;
+                padding-top: 5px;
+            }
+            .taxes_itc{
+                margin-top: 32px;
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    line-height: 21px;
+                }
+                .taxes_bic{
+                    @include w-from($screen-xl){
+                        display: flex;
+                        padding-right: 3px;
+                    }
+                }
+            }
+            .add_account{
+                margin-top: 16px;
+                width: 260px;
+                @include w-from($screen-xl){
+                    width: 480px;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    line-height: 21px;
+                }
+            }
+            .add_chief{
+                margin-top: 16px;
+                width: 240px;
+                @include w-from($screen-xl){
+                    width: auto;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}

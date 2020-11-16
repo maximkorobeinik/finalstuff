@@ -1,0 +1,134 @@
+@import 'mixins_resolution.scss';
+@import 'vars.scss';
+
+header{
+    width: auto;
+    height: 48px;
+    background: #000;
+    position: relative;
+    z-index: 1000;
+    transition: 0.2s !important;
+    @include w-from($screen-xl){
+        background: transparent;
+        transition: 0.2s;
+    }
+    .header_nav{
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        @include w-from($screen-xl){
+            width: 1167px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        .header_logo{
+            width: 54px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+            a.logo_link{
+                font-size: 24px;
+                font-weight: 700;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        .header_links{
+            display: flex;
+            width: auto;
+            overflow-x: scroll;
+            padding-bottom: 30px;
+            margin-bottom: -30px;
+            margin-left: 22px;
+            padding-left: 10px;
+            mask-image: linear-gradient(
+            90deg,
+            transparent 0, rgba(255, 255, 255, 0.25) 9px,
+            rgb(255, 255, 255) 18px,
+            rgb(255, 255, 255) calc(100% - 18px),
+            rgba(255, 255, 255, 0.25) calc(100% - 9px),
+            transparent);
+            @include w-from($screen-xl){
+                margin-left: 42px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                overflow: visible;
+                mask-image: none;
+            }
+            li{
+                list-style: none;
+                margin-right: 24px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    &:last-child{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .header_basket{
+            width: 135px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.3;
+            @include w-from($screen-xl){
+                width: auto;
+                position: absolute;
+                right: 16px;
+            }
+            a#basket{
+                color: #000;
+                font-size: 20px;
+                padding-left: 10px;
+                padding-top: 3px;
+                position: relative;
+                @include w-from($screen-xl){
+                    display: flex;
+                }
+                svg.basketIcon{
+                    width: 17px;
+                    height: 20px;
+                    color: #000;
+                }
+                .count_round{
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: #4541FE;
+                    position: absolute;
+                    top: -7px;
+                    left: 16px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+            }
+            
+            a#complete_basket{
+                display: none;
+                @include w-from($screen-xl){
+                    display: block;
+                    color: #000;
+                    margin-left: 6px;
+                }
+            }
+            a.disabled{
+                pointer-events: none;
+            }
+        }  
+    }
+}

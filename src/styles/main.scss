@@ -1,0 +1,355 @@
+@import 'cssreset.scss';
+@include css_reset();
+@import 'header.scss';
+@import 'slick.scss';
+@import 'slides.scss';
+@import 'mixins_resolution.scss';
+@import 'vars.scss';
+
+
+main{
+    width: 100%;
+    overflow: hidden;
+    .main_container{
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 'catalogue'
+        'cards';
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+            grid-template-rows: repeat(3, auto);  
+            grid-template-areas: 'catalogue catalogue'
+            'lookbook new_collection'
+            'preorder';
+        }
+        section.description_section{
+            grid-area: catalogue;
+            height: 766px;
+            width: auto;
+            display: grid;
+            grid-template-areas: 'description'
+            'catalogue';
+            @include w-from($screen-xl){
+                grid-template-areas: 'description catalogue';
+                width: 1136px;
+                margin: 0 auto;
+                height: 469px;
+            }
+            .top_description{
+                padding: 24px 64px 0px 16px;
+                line-height: 23px;
+                grid-area: description;
+                width: 240px;
+                @include w-from($screen-xl){
+                    width: 240px;
+                    padding: 48px 0 0 0;
+                }
+                p{
+                    padding-bottom: 15px;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+            .catalog_section{
+                display: grid;
+                grid-area: catalogue;
+                width: 274px;
+                height: 469px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: 'mens womens'
+                'shoes accessories'
+                'pricecuts pricecuts';
+                grid-gap: 15px;
+                padding-left: 16px;
+                margin-top: -68px;
+                @include w-from($screen-xl){
+                    grid-template-areas: 'mens womens shoes accessories pricecuts';
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: 1fr;
+                    width: auto;
+                    margin-top: 0;
+                    padding: 37px 0 0 0;
+                }
+                a{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #4541FE;
+                    padding-left: 9px;
+                    padding-bottom: 10px;
+                    line-height: 20px;
+                }
+                .mens_catalog{
+                    display: grid;
+                    grid-area: mens;
+                    grid-template-rows: repeat(6, 1fr);
+                    height: 172px;
+                    margin-top: 4px;
+                }
+                .womans_catalog{
+                    display: grid;
+                    grid-area: womens;
+                    grid-template-rows: repeat(6, 1fr);
+                    height: 172px;
+                    margin: 4px 0 0 0;
+                }
+                .shoes_catalog{
+                    display: grid;
+                    grid-area: shoes;
+                    grid-template-rows: repeat(6, 1fr);
+                    height: 164px;
+                    margin-top: 9px;
+                    a.costyl{
+                        white-space: nowrap;
+                    }
+                }
+                .accessories{
+                    display: grid;
+                    grid-area: accessories;
+                    grid-template-rows: repeat(6, 1fr);
+                    height: 164px;
+                    margin: 9px 0 0 -5px;
+                }
+                .price_cuts{
+                    display: grid;
+                    grid-area: pricecuts;
+                    height: 85px;
+                    margin-top: 10px;
+                }
+                a.catalog_header{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    color: #4541FE;
+                    padding-bottom: 12px;
+                    padding-left: 0;
+                    margin-top: 9px;
+                }
+            }
+        }
+        .main_cards_section{
+            display: grid;
+            grid-area: cards;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: 'lookbook'
+            'new_collection'
+            'preorder';
+            @include w-from($screen-xl){
+                grid-template-rows: repeat(2, auto);
+                grid-template-columns: repeat(2, auto);
+                grid-template-areas: 'lookbook new_collection'
+                'preorder preorder';
+                margin-top: -164px;
+                grid-gap: 16px;
+            }
+            section.look_and_choose{
+                height: 520px;
+                @include w-from($screen-xl){
+                    width: 464px;
+                }
+                .lookbook_section{
+                    grid-area: lookbook;
+                    width: 100%;
+                    height: 292px;
+                    background: #FFA88C;
+                    overflow: hidden;
+                    padding-top: 28px;
+                    @include w-from($screen-xl){
+                        width: 464px;
+                        margin-bottom: 24px;
+                        overflow: visible;
+                    }
+                    a.lookbook{
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #000;
+                        // display: inline-block;
+                        // border-bottom: 2px solid #000;
+                        text-decoration: underline;
+                        margin-left: 16px;
+                        padding-top: 27px;
+                        width: fit-content;
+                    }
+                    p.lookbook{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000;
+                        display: inline-block;
+                        margin-top: 14px;
+                        margin-left: 16px;
+                    }
+                    .mobile_lookbook{
+                        width: auto;
+                        margin-top: -7px;
+                        @include w-from($screen-xl){
+                            display: none;
+                        }
+                    }
+                    .desktop_lookbook{
+                        display: none;
+                        margin: -38px 0 0 13px;
+                        @include w-from($screen-xl){
+                            display: block;   
+                        }
+                    }
+                }
+                .our_choose{
+                    grid-area: choose;
+                    width: 100%;
+                    height: 176px;
+                    background: #7482FF;
+                    padding-top: 24px;
+                    @include w-from($screen-xl){
+                        height: 136px;
+                    }
+                    a.choose{
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #ffffff;
+                        // display: inline-block;
+                        // border-bottom: 2px solid #ffffff;
+                        text-decoration: underline;
+                        margin-left: 16px;
+                        line-height: 30px;
+                        margin-bottom: 9px;
+                        line-height: 40px;
+                    }
+                    p.choose_desc{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #ffffff;
+                        padding-top: 10px;
+                        line-height: 20.7px;
+                        margin-left: 16px;
+                        line-height: 21px;
+                    }
+                }
+            }
+            
+            section.new_collection{
+                grid-area: new_collection;
+                width: 100%;
+                height: 346px;
+                background: #FFE9FD;
+                padding-top: 24px;
+                padding-left: 16px;
+                @include w-from($screen-xl){
+                    height: 480px;
+                    width: 632px;
+                    padding-left: 24px;
+                }
+                a.collection{
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #000;
+                    // display: inline-block;
+                    // border-bottom: 2px solid #000;
+                    text-decoration: underline;
+                    line-height: 40px;
+                    margin-bottom: 9px;
+                }
+                p.collection_desc{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    padding-top: 10px;
+                    line-height: 20.7px;
+                }
+                img.mobile{
+                    width: 97vw;
+                    margin: -61px 0 0 -6px;
+                    @include w-from($screen-xl){
+                        display: none;
+                    }
+                }
+                img.desktop{
+                    display: none;
+                    @include w-from($screen-xl){
+                        display: block;
+                        margin: -87px 0 0 7px;
+                    }
+                }
+            }
+            section.preorder{
+            grid-area: preorder;
+                width: 100%;
+                height: 456px;
+                background: #F3F3F3;
+                overflow: hidden;
+                padding-top: 24px;
+                position: relative;
+                @include w-from($screen-xl){
+                    margin-top: -8px;
+                }
+                a.preorder{
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #000;
+                    // display: inline-block;
+                    // border-bottom: 2px solid #000;
+                    text-decoration: underline;
+                    line-height: 40px;
+                    margin-bottom: 9px;
+                    position: relative;
+                    margin-left: 16px;
+                    z-index: 7777;
+                }
+                .preorder_desc{
+                    position: relative;
+                    display: flex;
+                    margin-left: 16px;
+                    z-index: 9999;
+                    p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    padding-top: 10px;
+                    line-height: 20.7px;
+                    padding-right: 2px;
+                    }
+                }
+                img.preorder_mobileimg{
+                    width: 100%;
+                    margin-top: -71px;
+                    @include w-from($screen-xl){
+                        display: none;
+                    }
+                }
+                img.preorder_deskimg1{
+                    display: none;
+                    @include w-from($screen-xl){
+                        display: block;
+                        position: absolute;
+                        top: -45px;
+                        left: -182px;
+                    }
+                }
+                img.preorder_deskimg2{
+                    display: none;
+                    @include w-from($screen-xl){
+                        display: block;
+                        position: absolute;
+                        top: -45px;
+                        left: 318px;
+                    }
+                }
+                img.preorder_deskimg3{
+                    display: none;
+                    @include w-from($screen-xl){
+                        display: block;
+                        position: absolute;
+                        top: -45px;
+                        left: 818px;
+                    }
+                }
+
+            }
+        }
+        
+    }
+    
+    
+}
+
+@import 'footer.scss';

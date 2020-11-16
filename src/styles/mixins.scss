@@ -1,0 +1,104 @@
+@import 'vars.scss';
+@import 'mixins_resolution.scss';
+
+@mixin headerTransparentWithBlack {
+    
+}
+
+@mixin headerWhiteWithBlack {
+    header{
+        width: auto;
+        height: 48px;
+        background: #ffffff;
+        position: relative;
+        z-index: 1000;
+        .header_nav{
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            @include w-from($screen-xl){
+                width: 1167px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .header_logo{
+                width: 54px;
+                height: 31px;
+                display: flex;
+                align-items: center;
+                margin-left: 16px;
+                a.logo_link{
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+            .header_links{
+                display: flex;
+                width: auto;
+                overflow-x: scroll;
+                padding-bottom: 30px;
+                margin-bottom: -30px;
+                margin-left: 32px;
+                @include w-from($screen-xl){
+                    margin-left: 42px;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    overflow: visible;
+                }
+                li{
+                    list-style: none;
+                    margin-right: 24px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    a{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000;
+                        &:last-child{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .header_basket{
+                width: 135px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include w-from($screen-xl){
+                    width: auto;
+                    position: absolute;
+                    right: 16px;
+                }
+                a.basket{
+                    color: #000;
+                    font-size: 20px;
+                    padding-left: 10px;
+                    padding-top: 3px;
+                    @include w-from($screen-xl){
+                        display: flex;
+                    }
+                    img{
+                        width: 17px;
+                    }
+                }
+                a.complete_basket{
+                    display: none;
+                    @include w-from($screen-xl){
+                        display: block;
+                        color: #000;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

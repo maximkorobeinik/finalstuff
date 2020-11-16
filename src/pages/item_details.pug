@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="styles/item_details.css")
+        title Document
+    body
+
+    include header.pug
+    section.item_details
+        .details_container
+            .detail_slider
+                .mob_slider_desc
+                    .details_slider_main
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_1.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_2.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_3.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_4.png", alt="")
+
+                        
+                    .details_slider_small
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_1.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_2.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_3.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_4.png", alt="")
+                .desk_slider_desc
+                    .details_slider_main
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_1.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_2.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_3.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_big_4.png", alt="")
+                    .details_slider_small
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_1.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_2.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_3.png", alt="")
+                        .slide
+                            img(src="assets/img/margiela_desc_prev_small_4.png", alt="")
+            .desc_for_an_item
+                h6 maison margiela fusion low sneakers
+                p Кроссовки
+            .buy_now
+                .colors
+                    p.color Цвет
+                    .buttons_color
+                        input(id="radio_color1" type="radio" value="whitepink" name="color")
+                        label(for="radio_color1") Белый с розовым 
+                        input(id="radio_color2" type="radio" value="whitegreen" name="color")
+                        label(for="radio_color2") Белый с зелёным
+                .sizes
+                    p.sizes Размер US
+                    .buttons_sizes
+                        input(id="radio_1" type="radio" value="6" name="size")
+                        label(for="radio_1") 6
+                        input(id="radio_2" type="radio" value="6.5" name="size")
+                        label(for="radio_2") 6.5
+                        input(id="radio_3" type="radio" value="7" name="size")
+                        label(for="radio_3") 7 
+                        input(id="radio_4" type="radio" value="9" name="size")
+                        label(for="radio_4") 9
+                a.sizes_table(href="#popup") Таблица размеров
+                <br />
+                <button class="buy_btn" value="shoe_margiela_1">Купить, 92 000 ₽</button>
+            .item_description
+                .item_properties
+                    .item_specs  
+                        .materials_of_item
+                            b Материал
+                            p Кожа, текстиль
+                        .country_if_origin
+                            b Страна производитель
+                            p Италия
+                    .specification_of_item
+                        b Описание
+                        p Деконструктивный и&nbsp;авангардный дизайн с&nbsp;уникальными концепциями и&nbsp;нетрадиционным мастерством.
+                        p В&nbsp;качестве материала используются два вида кожи. Верх дополнен деталями из&nbsp;сетчатого материала и&nbsp;текстиля.
+                        p Грубые и&nbsp;многослойные кроссовки показывают отличие от&nbsp;традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с&nbsp;брызгами и потеками.
+                        p Оригинальная слегка асимметричкая система шнуровки и&nbsp;фирменный стежок на&nbsp;заднике завершают уникальный внешний вид.
+                    .details_of_item
+                        b Детали
+                        p &mdash;&nbsp;Два вида кожи
+                        p &mdash;&nbsp;Детали из&nbsp;текстиля
+                        p &mdash;&nbsp;Неординарная шнуровка
+                        p &mdash;&nbsp;Перфорация на&nbsp;мыске
+                        p &mdash;&nbsp;Стежок на&nbsp;заднике
+                        p &mdash;&nbsp;Фигурная резиновая подошва
+                        p &mdash;&nbsp;Цепкая подметка
+                        p &mdash;&nbsp;Окрашивание с&nbsp;брызгами и&nbsp; потеками
+                        p &mdash;&nbsp;Пестрая расцветка
+            .might_be_interesting
+                .might_be_interesting_mobile
+                    .interesting_header 
+                        h6 Вам может быть интересно
+                    .interesting_slider
+                        .interesting_slider_mob
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_4.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_10.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_17.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_2.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                .might_be_interesting_desktop
+                    .interesting_header 
+                        h6 Вам может быть интересно
+                    .interesting_slider
+                        .interesting_slider_desk
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_4.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_10.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_17.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_2.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_4.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_10.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_17.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+                            .interest_slide_item
+                                img(src="assets/img/desk_sneaker_2.jpg", alt="")
+                                a(href="") Maison Margiela Fusion Low Sneakers
+                                p.title Кроссовки
+                                .price
+                                    p 92&nbsp;000&nbsp;&#x20bd
+    #popup.mfp-hide 
+        .table
+            .table_header
+                h6 Таблица размеров
+            .table_items
+                .us
+                    .table_item
+                        p.cell_header US
+                    .table_item
+                        p 4
+                    .table_item
+                        p 4.5
+                    .table_item
+                        p 5
+                    .table_item
+                        p 5.5
+                    .table_item
+                        p 6
+                    .table_item
+                        p 6.5
+                    .table_item
+                        p 7
+                    .table_item
+                        p 7.5
+                .uk
+                    .table_item
+                        p.cell_header UK
+                    .table_item
+                        p 3.5
+                    .table_item
+                        p 4
+                    .table_item
+                        p 4.5
+                    .table_item
+                        p 6
+                    .table_item
+                        p 5.5
+                    .table_item
+                        p 6
+                    .table_item
+                        p 6.5
+                    .table_item
+                        p 7
+                .eu
+                    .table_item
+                        p.cell_header EU
+                    .table_item
+                        p 36
+                    .table_item
+                        p 37
+                    .table_item
+                        p 38
+                    .table_item
+                        p 39
+                    .table_item
+                        p 40
+                    .table_item
+                        p 41
+                    .table_item
+                        p 42
+                    .table_item
+                        p 43
+    script(src="scripts/script.js")
+    include footer.pug
+
+    

@@ -1,0 +1,400 @@
+@import 'main.scss';
+@import 'nav_header.scss';
+
+
+section.submit_order{
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    .submit_order_content{
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-template-areas: 'header_desc'
+        'items_section'
+        'submit_line'
+        'item_price'
+        'order_form'
+        'order_btn';
+        @include w-from($screen-xl){
+            width: 1136px;
+            margin: 0 auto;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: 'header_desc order_form'
+            'items_section order_form'
+            'submit_line order_btn'
+            'item_price order_btn';
+        }
+        .submit_header{
+            grid-area: header_desc;
+            margin: 25px 19px 0px 16px;
+            @include w-from($screen-xl){
+                margin: 32px 0 0 0;
+                width: 464px;
+            }
+            h3{
+                font-size: 32px;
+                font-weight: 700;
+                color: #000;
+                line-height: 41px;
+                width: 285px;
+                @include w-from($screen-xl){
+                    width: 400px;
+                }
+                b{
+                    color: #dddddd;
+                }
+            }
+        }
+        .order_items_section{
+            grid-area: items_section;
+            width: auto;
+            height: 349px;
+            background: transparent;
+            margin: 0 17px 0 16px;
+            padding-top: 46px;
+            @include w-from($screen-xl){
+                margin: 0;
+                width: 464px;
+                height: 566px;
+                padding-top: 32px;
+            }
+            .order_item{
+                width: 300px;
+                height: 90px;
+                background: transparent;
+                display: flex;
+                @include w-from($screen-xl){
+                    width: 400px;
+                    height: 160px;
+                    margin-bottom: 24px;
+                }
+                img{
+                    width: 90px;
+                    height: 90px;
+                    @include w-from($screen-xl){
+                        width: 160px;
+                        height: 160px;
+                    }
+                }
+                .additional_info{
+                    width: 186px;
+                    padding: 2px 0 0 9px;
+                    @include w-from($screen-xl){
+                        padding: 1px 0 0 16px;
+                    }
+                    h6.item_name{
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #000;
+                        line-height: 19px;
+                    }
+                    p.item_type{
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #000;
+                        padding-top: 4px;
+                        @include w-from($screen-xl){
+                            padding-top: 9px;
+                        }
+                    }
+                    h6.item_price{
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #000;
+                        padding-top: 8px;
+                        @include w-from($screen-xl){
+                            padding-top: 19px;
+                        }
+                    }
+                }
+            }
+        }
+        .submit_order_line{
+            grid-area: submit_line;
+            width: 100%;
+            height: 1px;
+            background: #dddddd;
+            margin-top: 14px;
+            @include w-from($screen-xl){
+                margin-left: -24px;
+                width: 488px;
+                margin-top: 16px;
+            }
+        }
+        .submit_item_price{
+            grid-area: item_price;
+            width: auto;
+            margin: 19px 16px 0;
+            @include w-from($screen-xl){
+                justify-self: end;
+                margin: 21px 3px 0 0;
+            }
+            h6{
+                font-size: 24px;
+                font-weight: 700;
+                color: #000;
+                margin-bottom: 2px;
+                @include w-from($screen-xl){
+                    margin-left: 6px;
+                }
+            }
+            b{
+                font-size: 13px;
+                font-weight: 400;
+                color: #666666;
+            }
+        }
+        .submit_order_form{
+            grid-area: order_form;
+            margin-top: 52px;
+            @include w-from($screen-xl){
+                width: 570px;
+                height: 370px;
+                margin: 96px 0 0 96px;
+            }
+            form.mailphone_submit{
+                display: grid;
+                margin-left: 16px;
+                margin-top: 1px;
+                @include w-from($screen-xl){
+                    margin-left: 13px;
+                    margin-top: 10px;
+                }
+                label{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    margin-bottom: -10px;
+                    border-radius: 2px;
+                    display: grid;
+                    @include w-from($screen-xl){
+                        display: flex;
+                        margin-top: 12px;
+                    }
+                }
+                input{
+                    height: 39px;
+                    width: auto;
+                    border: 1px solid #dddddd;
+                    margin-right: 39px;
+                    border-radius: 2px;
+                    background:#FBFBFB;
+                    color: #757575;
+                    padding-left: 10px;
+                    letter-spacing: 0.02rem;
+                    margin: 7px 39px 10px 0;
+                    transition: 0.2s;
+                    &::placeholder{
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #dddddd;
+                    }
+                    &:focus{
+                        border: 1px solid #666666;
+                        outline: none;
+                    }
+                    @include w-from($screen-xl){
+                        width: 250px;
+                        margin: -13px 0 0 41px;
+                    }
+                }
+                input#submit_phone{
+                    @include w-from($screen-xl){
+                        margin-left: 44px;
+                    }
+                }
+                b{
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #666666;
+                    margin: 5px 0 28px 12px;
+                    @include w-from($screen-xl){
+                        margin: 14px 0 28px 115px;
+                    }
+                }
+            }
+            form.cityaddr_submit{
+                display: grid;
+                margin-left: 16px;
+                margin-top: 17px;
+                @include w-from($screen-xl){
+                    margin-left: 13px;
+                    margin-top: 27px;
+                }
+                label{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #000;
+                    margin-bottom: 26px;
+                    display: grid;
+                    @include w-from($screen-xl){
+                        display: flex;
+                        margin-bottom: 0;
+                    }
+                }
+                label.submit_addr{
+                    @include w-from($screen-xl){
+                        margin-top: 17px;
+                        padding-top: 19px;
+                    }
+                }
+                input{
+                    height: 37px;
+                    width: auto;
+                    border: 1px solid #dddddd;
+                    border-radius: 2px;
+                    background:#FBFBFB;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #757575;
+                    padding-left: 10px;
+                    letter-spacing: 0.02rem;
+                    margin: 8px 39px 0 0;
+                    transition: 0.2s;
+                    &::placeholder{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #dddddd;
+                    }
+                    &:focus{
+                        border: 1px solid #666666;
+                        outline: none;
+                    }
+                    @include w-from($screen-xl){
+                        width: 251px;
+                        margin: -11px 0 0 63px;
+                    }
+                }
+                textarea{
+                    font-family: 'PT Sans', sans-serif;
+                    width: auto;
+                    height: 72px;
+                    border: 1px solid #dddddd;
+                    resize: none;
+                    border-radius: 2px;
+                    background:#FBFBFB;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #757575;
+                    padding: 10px 0 0 11px;
+                    letter-spacing: 0.02rem;
+                    margin: 7px 39px 0 0;
+                    transition: 0.2s;
+                    &::placeholder{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #dddddd;
+                    }
+                    &:focus{
+                        border: 1px solid #666666;
+                        outline: none;
+                    }
+                    @include w-from($screen-xl){
+                        width: 252px;
+                        margin: -12px 0 0 61px;
+                    }
+                }
+            }
+        }
+        .submit_order_btn_section{
+            grid-area: order_btn;
+            width: auto;
+            height: 132px;
+            background: #f2f2f2;
+            margin-top: -2px;
+            @include w-from($screen-xl){
+                width: 488px;
+                height: 98px;
+                margin: -162px 0px 0 85px;
+            }
+            .delivery_pay{
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas: 'btn_desc'
+                'btn_btn';
+                padding: 16px 0 0 16px;
+                @include w-from($screen-xl){
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-rows: 1fr;
+                    grid-template-areas: 'btn_desc btn_btn';
+                    padding: 0;
+                }
+                .delivery_pay_note{
+                    grid-area: btn_desc;
+                    @include w-from($screen-xl){
+                        padding: 28px 0px 0 24px;
+                        width: 160px;
+                    }
+                    p{
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #000;
+                        line-height: 17px;
+                    }
+                }
+                .delivery_pay_btn{
+                    grid-area: btn_btn;
+                    @include w-from($screen-xl){
+                        margin: 24px 0 0 -54px;
+                    }
+                    button.submit_order_btn_pay{
+                        background: linear-gradient(180deg, #FFC908 0%, #FFBA08 100%);
+                        box-shadow: 0px 0px 15px rgba(255, 146, 17, 0.5);
+                        border-radius: 4px;
+                        border: none;
+                        height: 42px;
+                        min-width: 230px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #000;
+                        margin-top: 16px;
+                        transition: 0.2s;
+                        @include w-from($screen-xl){
+                            margin-top: 0;
+                        }
+                        &:hover{
+                            box-shadow: none;
+                            cursor: pointer;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+.submit_page_footer{
+    width: auto;
+    margin-top: 58px;
+    .submit_footer_content{
+        margin: 0 0 0 10px;
+        @include w-from($screen-xl){
+            display: flex;
+            width: 1136px;
+            margin: 0 auto;
+            margin-top: 84px;
+        }
+        p{
+            font-size: 13px;
+            font-weight: 400;
+            color: #9f9f9f;
+            padding-bottom: 5px;
+        }
+        a{
+            font-size: 13px;
+            font-weight: 400;
+            color: #9f9f9f;
+            margin-bottom: 3px;
+            display: block;
+            @include w-from($screen-xl){
+                margin-left: 24px;
+            }
+        }
+        a.footer_submit_tel{
+            text-decoration: none;
+        }
+        a.footer_submit_email a.terms_personaldata{
+            text-decoration: underline;
+        }
+    }
+}

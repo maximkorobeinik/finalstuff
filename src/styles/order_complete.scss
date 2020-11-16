@@ -1,0 +1,163 @@
+@import 'main.scss';
+@import 'nav_header.scss';
+
+section.done_section{
+    width: auto;
+    background: #ffffff;
+    height: auto;
+    margin: 24px 17px 0 16px;
+    @include w-from($screen-xl){
+        width: 1136px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    h3{
+        font-size: 32px;
+        font-weight: 700;
+        color: #000;
+        line-height: 41px;
+        margin-bottom: 24px;
+        @include w-from($screen-xl){
+            margin-bottom: 32px;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        color: #000;
+        line-height: 23px;
+        padding-bottom: 16px;
+        @include w-from($screen-xl){
+            margin-top: 10px;
+        }
+        a{
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+    .go_back{
+        margin-bottom: 56px;
+        @include w-from($screen-xl){
+            display: flex;
+            margin-bottom: 64px;
+            margin-top: -10px;
+        }
+        p{
+            padding-bottom: 0;
+        }
+    }
+}
+
+section.done_offer{
+    width: auto;
+    height: auto;
+    margin: -23px 15px 40px 16px;
+    @include w-from($screen-xl){
+        width: 1136px;
+        margin: 0 auto;
+    }
+    h3{
+        font-size: 25px;
+        font-weight: 700;
+        color: #000;
+        line-height: 32px;
+        margin-bottom: 24px;
+    }
+    .done_offer_slider_mob{
+        display: flex;
+        width: 240px;
+        height: 344px;
+        margin: 0 auto;
+        @include w-from($screen-xl){
+            display: none;
+        }
+        .done_offer_item{
+            width: 240px;
+            height: 344px;
+            img{
+                width: 240px;
+                height: 240px;
+            }
+            a{
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+                text-decoration: underline;
+                display: block;
+                width: 165px;
+                padding-top: 8px;
+                line-height: 21px;
+            }
+            p.title{
+                font-size: 13px;
+                font-weight: 400;
+                color: #000;
+                padding-top: 7px;
+            }
+            .price{
+                padding-top: 15px;
+                p{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #000;
+                }
+            }
+        }
+    }
+    .done_offer_slider_desk{
+        display: none;
+        width: auto;
+        height: 384px;
+        background: transparent;
+        
+        @include w-from($screen-xl){
+            height: 400px;
+            display: flex;
+            padding: 0 40px;
+            width: 1130px;
+            justify-content: space-between;
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+        .done_offer_item{
+            width: 240px;
+            height: 344px;
+            background: none;
+            margin: 0 1px;
+            display: grid;
+            justify-content: center;
+        }
+        img{
+            width: 240px;
+            height: 240px;
+        }
+        a{
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            text-decoration: underline;
+            display: block;
+            width: 165px;
+            padding-top: 5px;
+            line-height: 21px;
+        }
+        p.title{
+            font-size: 13px;
+            font-weight: 400;
+            color: #000;
+            padding-top: 7px;
+        }
+        .price{
+            padding-top: 15px;
+            p{
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: 9px;
+}

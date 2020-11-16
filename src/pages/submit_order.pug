@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="styles/submit_order.css")
+    body
+    section.submit_order
+        .submit_order_content
+            .submit_header
+                h3 Фетч <b>•</b> Оформление заказа
+            .order_items_section
+                .order_item
+                    img(src="assets/img/margiela_1_order.png", alt="")
+                    .additional_info
+                        h6.item_name Maison Margiela Fusion Low Sneakers
+                        p.item_type Кроссовки
+                        h6.item_price 92 000 ₽
+            .submit_order_line
+            .submit_item_price
+                h6 276&nbsp;000 &#x20bd
+                b Доставка бесплатно
+            .submit_order_form
+                form.mailphone_submit(action="")
+                    label(for="submit_email") Эл. почта
+                        input(id="submit_email" type="email" placeholder="petrov@yandex.ru")
+                    b Пришлём чеки и трек-номер
+                    label(for="submit_phone") Телефон
+                        input(id="submit_phone" type="text" placeholder="+7 999 275-12-37")
+                    b Менеджер позвонит, чтобы подтвердить заказ
+                form.cityaddr_submit(action="")
+                    label(for="submit_city") Город
+                        input(id="submit_city" type="text" placeholder="Москва")
+                    label(class ="submit_addr" for="submit_addr") Адрес
+                        textarea(id="submit_addr" type="text" placeholder="Улица Пушкина, дом Колотушкина, квартира 99, вход со двора")
+            .submit_order_btn_section
+                .delivery_pay
+                    .delivery_pay_note
+                        p Бесплатная доставка&nbsp;курьером.
+                        p Оплата картой онлайн.
+                    .delivery_pay_btn
+                        button.submit_order_btn_pay Оформить заказ, 276 000 ₽
+    .submit_page_footer
+        .submit_footer_content
+            p © Фетч-команда, 2019
+            <br />
+            a.footer_submit_tel(href="tel:88009121142") 8 800 912-11-42, звонок бесплатный
+            <br />
+            a.footer_submit_email(href="shop@fetch.ru") shop@fetch.ru
+            <br />
+            a.terms_personaldata(href="") Правила обработки персональных данных
+        script(src="scripts/submitCheck.js")

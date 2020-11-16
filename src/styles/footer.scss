@@ -1,0 +1,280 @@
+@import 'mixins_resolution.scss';
+@import 'vars.scss';
+@import 'magnific-popup.scss';
+
+@mixin topLink{
+    margin-left: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 38px;
+    width: fit-content;
+    text-decoration: none;
+    line-height: 17px;
+    @include w-from($screen-xl){
+        font-size: 18px;
+        margin-left: 0px;
+        margin-top: 35px;
+    }
+}
+
+@mixin justLinks{
+    margin-left: 33px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    border-bottom: 1px solid #ffffff;
+    width: fit-content;
+    text-decoration: none;
+    padding-top: 13px;
+    @include w-from($screen-xl){
+        margin-left: 10px;
+        padding-top: 14px;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+
+footer{
+    width: 100%;
+    background: #000;
+    @include w-from($screen-xl){
+        margin-top: 72px;
+    }
+    .footer_container{
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 'fetch'
+        'mens'
+        'womens'
+        'shoes'
+        'accessories'
+        'discount'
+        'info';
+        height: 1265px;
+        @include w-from($screen-xl){
+            width: 1136px;
+            height: 350px;
+            margin: 0 auto;
+            grid-template-columns: repeat(6, 178px);
+            grid-template-rows: 1fr;
+            grid-template-areas: 'fetch mens womens shoes accessories discount'
+            'info info info info info info';
+            align-items: flex-start;
+        }
+        .fetch_footer{
+            grid-area: fetch;
+            height: 243px;
+            width: 100%;
+            display: grid;
+            
+            .about_us{
+                height: 114px;
+                display: grid;
+                margin-top: 35px;
+                h6.fetch{
+                    color: #ffffff;
+                    margin-left: 16px;
+                    font-weight: 700;
+                    font-size: 17px;
+                    margin-bottom: 7px;
+                    @include w-from($screen-xl){
+                        margin-left: 0;
+                    }
+                }
+                a{
+                    width: fit-content;
+                    color: #ffffff;
+                    margin-left: 33px;
+                    text-decoration: none;
+                    display: inline-block;
+                    border-bottom: 1px solid #ffffff;
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin-top: 8px;
+                    margin-bottom: 5px;
+                    @include w-from($screen-xl){
+                        margin-left: 10px;
+                    }
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .contact_us{
+                height: 67px;
+                margin-top: 31px;
+                display: grid;
+                a{
+                    color: #ffffff;
+                    margin-left: 33px;
+                    text-decoration: none;
+                    display: inline-block;
+                    text-decoration: underline;
+                    @include w-from($screen-xl){
+                     margin-left: 9px;
+                    }
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+                a.fetch_link_tel{
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: #ffffff;
+                    font-weight: 700;
+                    padding-top: 9px;
+                    &:hover{
+                        opacity: 1; //Ну це костил
+                    }
+                }
+                p{
+                    color: #ffffff;
+                    margin-left: 33px;
+                    font-size: 13px;
+                    opacity: .75;
+                    @include w-from($screen-xl){
+                        margin-left: 9px;
+                    }
+                }
+            }
+        }
+        .mens_footer{
+            @include w-from($screen-xl){
+                padding-left: 8px;
+            }
+            grid-area: mens;
+            height: 172px;
+            width: 100%;
+            display: grid;
+            a.mens_link{
+                @include justLinks;
+            }
+            a.formens{
+                @include topLink;
+            }
+        }
+        .womans_footer{
+            grid-area: womens;
+            height: 172px;
+            width: 100%;
+            display: grid;
+            margin-top: 31px;
+            @include w-from($screen-xl){
+                margin-top: 0;
+                padding-left: 3px;
+            }
+            a.womans_link{
+                @include justLinks;
+            }
+            a.forwomans{
+                @include topLink;
+            }
+        }
+        .shoes_footer{
+            grid-area: shoes;
+            height: 85px;
+            width: 100%;
+            display: grid;
+            margin-top: 26px;
+            margin-top: 32px;
+            @include w-from($screen-xl){
+                margin-top: 0;
+            }
+            a.shoes_link{
+                @include justLinks;
+            }
+            a.shoes{
+                @include topLink;
+            }
+        }
+        .accessories_footer{
+            grid-area: accessories;
+            height: 143px;
+            width: 100%;
+            display: grid;
+            margin-top: 27px;
+            @include w-from($screen-xl){
+                margin-top: 0;
+                padding-left: 3px;
+            }
+            a.accessories_link{
+                @include justLinks;
+            }
+            a.accessories{
+                @include topLink;
+                margin-top: 0;
+            }
+        }
+        .discount_footer{
+            grid-area: discount;
+            height: 85px;
+            width: 100%;
+            display: grid;
+            margin-top: 32px;
+            @include w-from($screen-xl){
+                margin-top: 0;
+                padding-left: 20px;
+            }
+            a.discount_link{
+                @include justLinks;
+            }
+            a.discount{
+                @include topLink;
+                margin-top: 0;
+            }
+        }
+        .footer_info{
+            grid-area: info;
+            height: 75px;
+            width: 100%;
+            display: grid;
+            margin-top: 14px;
+            @include w-from($screen-xl){
+                display: flex;
+                margin-top: 0;
+                margin-bottom: 20px;
+                height: fit-content;
+            }
+            p.info{
+                font-size: 0.79rem;
+                font-weight: 400;
+                color: #666666;
+                margin-left: 15px;
+                padding-bottom: 15px;
+                @include w-from($screen-xl){
+                    margin-left: 0;
+                    letter-spacing: 0.006rem;
+                }
+            }
+            a.info{
+                font-size: 0.765rem;
+                font-weight: 400;
+                color: #666666;
+                margin-left: 15px;
+                padding-bottom: 14px;
+                padding-top: 3px;
+                transition: 0.2s;
+                @include w-from($screen-xl){
+                    margin-left: 27px;
+                    letter-spacing: 0.019rem;
+                    padding-top: 0;
+                }
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+.popup_content{
+    width: 50vw;
+    height: 60vh;
+    margin: 0 auto;
+    background: #ffffff;
+    z-index: 9999;
+    position: relative;
+}
